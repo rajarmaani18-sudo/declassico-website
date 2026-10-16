@@ -4,21 +4,25 @@ interface HeroCarouselProps {
   onOpenQuote?: () => void;
 }
 
+const BASE_URL = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
 const slides = [
   {
-    src: '/banners/Refreshing Every Moment Bottle Launch.png',
+    src: `${BASE_URL}banners/Refreshing Every Moment Bottle Launch.png`,
     alt: 'Refreshing Every Moment Bottle Launch',
   },
   {
-    src: '/banners/Premium Bottle_ It’s a Boy!.png',
+    src: `${BASE_URL}banners/Premium Bottle_ It’s a Boy!.png`,
     alt: "Premium Bottle - It's a Boy!",
   },
   {
-    src: '/banners/Everyday Refreshment Splash.png',
+    src: `${BASE_URL}banners/Everyday Refreshment Splash.png`,
     alt: 'Everyday Refreshment Splash',
   },
   {
-    src: '/banners/Signature Bottle_ Pure Water, Bold Style.png',
+    src: `${BASE_URL}banners/Signature Bottle_ Pure Water, Bold Style.png`,
     alt: 'Signature Bottle - Pure Water, Bold Style',
   },
 ];

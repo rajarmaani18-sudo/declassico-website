@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 
+const BASE_URL = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
 const CANDIDATE_IMAGE_SOURCES = [
-  '/Premium Bottled Water Lifestyle Collage-1.png',
-  '/Premium Bottled Water Lifestyle Collage.png',
-  '/banners/Premium Bottled Water Lifestyle Collage.png',
-  '/gallery/Premium Bottled Water Lifestyle Collage.png',
+  `${BASE_URL}Premium Bottled Water Lifestyle Collage-1.png`,
+  `${BASE_URL}Premium Bottled Water Lifestyle Collage.png`,
+  `${BASE_URL}banners/Premium Bottled Water Lifestyle Collage.png`,
+  `${BASE_URL}gallery/Premium Bottled Water Lifestyle Collage.png`,
 ];
 
 export function GallerySection() {
