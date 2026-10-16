@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --brand-blue: #0066FF;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Montserrat', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.font-serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ========================================================
+   MOBILE TOUCH INTERACTIONS & FEEDBACK
+   Converts desktop hover states into natural touch feedback
+   on touchscreen devices without sticky hover states.
+   ======================================================== */
+
+@media (pointer: coarse), (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Touch active styles matching hover styles exactly */
+.touch-active.hover\:-translate-y-2 {
+  transform: translateY(-0.5rem);
+}
+.touch-active.hover\:scale-105 {
+  transform: scale(1.05);
+}
+.touch-active.hover\:scale-\[1\.02\] {
+  transform: scale(1.02);
+}
+.touch-active.hover\:border-\[\#0066FF\] {
+  border-color: #0066FF;
+}
+.touch-active.hover\:border-\[\#0066FF\]\/40 {
+  border-color: rgba(0, 102, 255, 0.4);
+}
+.touch-active.hover\:border-\[\#0066FF\]\/60 {
+  border-color: rgba(0, 102, 255, 0.6);
+}
+.touch-active.hover\:bg-\[\#0066FF\] {
+  background-color: #0066FF;
+}
+.touch-active.hover\:bg-\[\#0066FF\]\/60 {
+  background-color: rgba(0, 102, 255, 0.6);
+}
+.touch-active.hover\:bg-blue-50 {
+  background-color: #eff6ff;
+}
+.touch-active.hover\:bg-blue-50\/40 {
+  background-color: rgba(239, 246, 255, 0.4);
+}
+.touch-active.hover\:bg-blue-50\/60 {
+  background-color: rgba(239, 246, 255, 0.6);
+}
+.touch-active.hover\:bg-blue-600 {
+  background-color: #2563eb;
+}
+.touch-active.hover\:bg-gray-50 {
+  background-color: #f9fafb;
+}
+.touch-active.hover\:bg-gray-100 {
+  background-color: #f3f4f6;
+}
+.touch-active.hover\:bg-gray-200 {
+  background-color: #e5e7eb;
+}
+.touch-active.hover\:bg-white {
+  background-color: #ffffff;
+}
+.touch-active.hover\:bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.touch-active.hover\:bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.touch-active.hover\:text-\[\#0066FF\] {
+  color: #0066FF;
+}
+.touch-active.hover\:text-gray-200 {
+  color: #e5e7eb;
+}
+.touch-active.hover\:text-gray-600 {
+  color: #4b5563;
+}
+.touch-active.hover\:text-gray-900 {
+  color: #111827;
+}
+.touch-active.hover\:text-white {
+  color: #ffffff;
+}
+.touch-active.hover\:brightness-110 {
+  filter: brightness(1.1);
+}
+.touch-active.hover\:shadow-\[0_20px_40px_-10px_rgba\(0\,102\,255\,0\.22\)\,0_8px_16px_rgba\(0\,0\,0\,0\.06\)\] {
+  box-shadow: 0 20px 40px -10px rgba(0, 102, 255, 0.22), 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+.touch-active.hover\:shadow-blue-500\/25 {
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.25);
+}
+.touch-active.hover\:shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.touch-active.hover\:shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Group touch-active states */
+.group.touch-active .group-hover\:scale-105,
+.group.touch-active.group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+.group.touch-active .group-hover\:border-\[\#0066FF\]\/60 {
+  border-color: rgba(0, 102, 255, 0.6);
+}
+.group.touch-active .group-hover\:bg-\[\#0066FF\] {
+  background-color: #0066FF;
+}
+.group.touch-active .group-hover\:text-\[\#0066FF\] {
+  color: #0066FF;
+}
+.group.touch-active .group-hover\:text-white {
+  color: #ffffff;
+}
+
+/* Native :active pseudo-class support on touchscreen devices */
+@media (pointer: coarse), (hover: none) {
+  .hover\:-translate-y-2:active {
+    transform: translateY(-0.5rem);
+  }
+  .hover\:scale-105:active {
+    transform: scale(1.05);
+  }
+  .hover\:scale-\[1\.02\]:active {
+    transform: scale(1.02);
+  }
+  .hover\:border-\[\#0066FF\]:active {
+    border-color: #0066FF;
+  }
+  .hover\:border-\[\#0066FF\]\/40:active {
+    border-color: rgba(0, 102, 255, 0.4);
+  }
+  .hover\:border-\[\#0066FF\]\/60:active {
+    border-color: rgba(0, 102, 255, 0.6);
+  }
+  .hover\:bg-\[\#0066FF\]:active {
+    background-color: #0066FF;
+  }
+  .hover\:bg-\[\#0066FF\]\/60:active {
+    background-color: rgba(0, 102, 255, 0.6);
+  }
+  .hover\:bg-blue-50:active {
+    background-color: #eff6ff;
+  }
+  .hover\:bg-blue-50\/40:active {
+    background-color: rgba(239, 246, 255, 0.4);
+  }
+  .hover\:bg-blue-50\/60:active {
+    background-color: rgba(239, 246, 255, 0.6);
+  }
+  .hover\:bg-blue-600:active {
+    background-color: #2563eb;
+  }
+  .hover\:bg-gray-50:active {
+    background-color: #f9fafb;
+  }
+  .hover\:bg-gray-100:active {
+    background-color: #f3f4f6;
+  }
+  .hover\:bg-gray-200:active {
+    background-color: #e5e7eb;
+  }
+  .hover\:bg-white:active {
+    background-color: #ffffff;
+  }
+  .hover\:bg-white\/10:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .hover\:bg-white\/80:active {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .hover\:text-\[\#0066FF\]:active {
+    color: #0066FF;
+  }
+  .hover\:text-gray-200:active {
+    color: #e5e7eb;
+  }
+  .hover\:text-gray-600:active {
+    color: #4b5563;
+  }
+  .hover\:text-gray-900:active {
+    color: #111827;
+  }
+  .hover\:text-white:active {
+    color: #ffffff;
+  }
+  .hover\:brightness-110:active {
+    filter: brightness(1.1);
+  }
+  .hover\:shadow-\[0_20px_40px_-10px_rgba\(0\,102\,255\,0\.22\)\,0_8px_16px_rgba\(0\,0\,0\,0\.06\)\]:active {
+    box-shadow: 0 20px 40px -10px rgba(0, 102, 255, 0.22), 0 8px 16px rgba(0, 0, 0, 0.06);
+  }
+  .hover\:shadow-blue-500\/25:active {
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.25);
+  }
+  .hover\:shadow-lg:active {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  }
+  .hover\:shadow-md:active {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  .group:active .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+  .group:active .group-hover\:border-\[\#0066FF\]\/60 {
+    border-color: rgba(0, 102, 255, 0.6);
+  }
+  .group:active .group-hover\:bg-\[\#0066FF\] {
+    background-color: #0066FF;
+  }
+  .group:active .group-hover\:text-\[\#0066FF\] {
+    color: #0066FF;
+  }
+  .group:active .group-hover\:text-white {
+    color: #ffffff;
+  }
+}

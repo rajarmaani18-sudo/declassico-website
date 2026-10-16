@@ -1,0 +1,6 @@
+{
+  "name": "DeClassico",
+  "description": "Premium custom bottled water crafted for brands, events, and special occasions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
